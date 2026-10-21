@@ -73,11 +73,13 @@
             background-color: #003354 !important;
             border-color: #003354 !important;
         }
+
+
     </style>
 
     @stack('styles')
 </head>
-<body class="hold-transition sidebar-mini layout-fixed">
+<body class="hold-transition sidebar-mini">
 <div class="wrapper">
 
     {{-- NAVBAR SUPERIOR --}}
@@ -147,10 +149,11 @@
                             <p>Dashboard Académico</p>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
+                   <li class="nav-item">
+                        <a href="{{ route('academico.busqueda-estudiante.index') }}" 
+                            class="nav-link @if(request()->routeIs('academico.busqueda-estudiante.*')) active @endif">
                             <i class="nav-icon fas fa-user-graduate"></i>
-                            <p>Busqueda Estudiante</p>
+                            <p>Búsqueda Estudiante</p>
                         </a>
                     </li>
                     <li class="nav-item">
@@ -226,8 +229,9 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class="nav-icon fas fa-clock"></i>
+                        <a href="{{ route('academico.curso-turno.index') }}"
+                            class="nav-link @if(request()->routeIs('academico.curso-turno.*')) active @endif">
+                                <i class="nav-icon fas fa-clock"></i>
                             <p>Turno Clases</p>
                         </a>
                     </li>

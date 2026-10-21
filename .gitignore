@@ -1,3 +1,4 @@
+# ===== Laravel default =====
 /.phpunit.cache
 /node_modules
 /public/build
@@ -17,3 +18,39 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+
+# ===== Storage y cache (crítico) =====
+/storage/logs/*
+!/storage/logs/.gitignore
+
+/storage/framework/cache/data/*
+!/storage/framework/cache/data/.gitignore
+
+/storage/framework/sessions/*
+!/storage/framework/sessions/.gitignore
+
+/storage/framework/testing/*
+!/storage/framework/testing/.gitignore
+
+/storage/framework/views/*
+!/storage/framework/views/.gitignore
+
+/bootstrap/cache/*
+!/bootstrap/cache/.gitignore
+
+/public/images/*.pdf
+/public/images/doge*.png
+
+# ===== Sistema operativo =====
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# ===== Editores extra (opcional) =====
+*.sublime-project
+*.sublime-workspace
+/.history
+
+# ===== Temporales (opcional) =====
+*.bak
